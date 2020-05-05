@@ -65,7 +65,8 @@ weatherForm.addEventListener("submit", (event) => {
           } else {
             weatherIcon.className = "wi wi-day-sunny";
           }
-        } else {
+        }
+        if (data.description.includes("cloud")) {
           weatherIcon.className = "wi wi-day-cloudy";
         }
         locationElement.textContent = data.cityName;
